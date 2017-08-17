@@ -85,5 +85,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate o~/.oh-my-zsh"
 
+alias vi='vim'
+alias ob='ssh zhixin.lm@100.81.152.45'
+
+if brew list | grep coreutils > /dev/null ; then
+    PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+    alias ls='ls -F --show-control-chars --color=auto'
+    eval `gdircolors -b $HOME/.dir_colors`
+fi
+
 [[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
