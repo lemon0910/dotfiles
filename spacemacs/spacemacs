@@ -36,14 +36,13 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ivy
+     ;;ivy
+     helm
      ranger
      colors
      prodigy
      better-defaults
-     search-engine
-     (syntax-checking :variables syntax-checking-enable-by-default nil
-                      syntax-checking-enable-tooltips nil)
+     ;;search-engine
      (vinegar :variables vinegar-reuse-dired-buffer t)
      (spacemacs-layouts :variables layouts-enable-autosave nil
                         layouts-autosave-delay 300)
@@ -54,33 +53,23 @@ values."
           magit-revert-buffers 'silent
           magit-refs-show-commit-count 'all
           magit-revision-show-gravatars nil)
-     (ibuffer :variables ibuffer-group-buffers-by 'projects)
      (auto-completion :variables auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
                       :disabled-for org markdown)
      (osx :variables osx-dictionary-dictionary-choice "Simplified Chinese - English"
           osx-command-as 'super)
-     restclient
+     ;;restclient
      (gtags :disabled-for clojure emacs-lisp javascript latex python shell-scripts)
      (shell :variables shell-default-shell 'eshell)
-     deft
-     markdown
-     (org :variables org-want-todo-bindings t)
-     gpu
-     yaml
      (python :variables
              python-test-runner '(nose pytest))
      (go :variables
          go-tab-width 4)
-     lua
-     html
-     javascript
-     (typescript :variables
-                typescript-fmt-on-save nil
-                typescript-fmt-tool 'typescript-formatter)
      emacs-lisp
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
+     imenu-list
+     vim-powerline
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -107,6 +96,7 @@ values."
                     helm-themes helm-swoop helm-spacemacs-help smeargle
                     ido-vertical-mode flx-ido company-quickhelp counsel-projectile
                     window-purpose ivy-purpose helm-purpose spacemacs-purpose-popwin
+                    flycheck helm-flycheck ycmd helm-cscope xcscope
            )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -177,8 +167,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(monokai
-                         solarized-dark
-                         solarized-light)
+                         spacemacs-dark
+                         spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -306,7 +296,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'origami
@@ -417,8 +407,6 @@ values."
                             (projectile-switch-project-by-name project)
                             (setq default-directory old-default-directory))))))
   (electric-pair-mode t)
-  (global-linum-mode t)
-  (linum-relative-global-mode t)
   )
 
 
@@ -432,7 +420,7 @@ values."
  '(exec-path-from-shell-arguments (quote ("-l")))
  '(package-selected-packages
    (quote
-    (spaceline powerline go-guru go-eldoc company-go go-mode org-plus-contrib))))
+    (imenu-list helm-cscope xcscope restclient-helm helm-pydoc helm-projectile helm-mode-manager helm-gtags helm-gitignore helm-flx helm-descbinds helm-company helm-ag helm helm-core dracula-theme-theme yapfify yaml-mode xterm-color web-mode web-beautify unfill tide typescript-mode tagedit slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder ranger rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode prodigy pip-requirements pbcopy osx-trash osx-dictionary origami org-pomodoro alert log4e gntp ob-restclient ob-http mwim multi-term mmm-mode markdown-toc markdown-mode lua-mode live-py-mode less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ibuffer-projectile hy-mode htmlize haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help engine-mode emmet-mode editorconfig deft cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-restclient restclient know-your-http-well company-c-headers company-anaconda company color-identifiers-mode coffee-mode cmake-mode auto-yasnippet yasnippet anaconda-mode pythonic spaceline powerline go-guru go-eldoc company-go go-mode org-plus-contrib))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
