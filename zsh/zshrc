@@ -2,13 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/root/.oh-my-zsh
+export ZSH=/Users/lemon/.dotfiles/oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="agnoster"
-ZSH_THEME="ys"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME='kphoen'
+# ZSH_THEME='agnoster'
+ZSH_THEME='ys'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +54,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract zsh-autosuggestions)
+plugins=(git zsh-autosuggestions x)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,10 +85,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate o~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vi='vim'
-alias ob='ssh zhixin.lm@100.81.152.45'
+alias vi='nvim'
+alias vim='nvim'
 
 if brew list | grep coreutils > /dev/null ; then
     PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -94,5 +96,8 @@ if brew list | grep coreutils > /dev/null ; then
     eval `gdircolors -b $HOME/.dir_colors`
 fi
 
-[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
