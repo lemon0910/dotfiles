@@ -7,10 +7,8 @@ export ZSH=/Users/lemon/.dotfiles/oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME='kphoen'
-# ZSH_THEME='agnoster'
-ZSH_THEME='ys'
+# ZSH_THEME='ys'
+ZSH_THEME="bullet-train"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,9 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vi='nvim'
-alias vim='nvim'
-
 if brew list | grep coreutils > /dev/null ; then
     PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
     alias ls='ls -F --show-control-chars --color=auto'
@@ -97,7 +92,5 @@ if brew list | grep coreutils > /dev/null ; then
 fi
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
