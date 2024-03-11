@@ -21,13 +21,6 @@ local config = {
   window_background_opacity = 0.9,
   macos_window_background_blur = 70,
   text_background_opacity = 0.9,
-
-  window_padding = {
-    left = 20,
-    right = 20,
-    top = 20,
-    bottom = 5,
-  },
 }
 
 local a = wezterm.action
