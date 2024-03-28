@@ -2,14 +2,10 @@ local wezterm = require 'wezterm'
 
 -- General config
 local config = {
-  -- color_scheme = "Tokyo Night Moon",
   color_scheme = "Catppuccin Mocha",
   font = wezterm.font("Hack Nerd Font", { weight = "Regular" }),
   font_size = 13,
-  -- line_height = 1.2,
-  -- cell_width = 0.9,
   use_fancy_tab_bar = false,
-  -- force_reverse_video_cursor = true,
   hide_tab_bar_if_only_one_tab = true,
   adjust_window_size_when_changing_font_size = false,
   max_fps = 120,
