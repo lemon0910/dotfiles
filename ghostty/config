@@ -1,0 +1,18 @@
+# keybindings
+keybind = clear
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+keybind = super+t=new_tab
+keybind = super+left=previous_tab
+keybind = super+right=next_tab
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = super+r=reload_config
+keybind = super+s=write_screen_file:open
+keybind = super+w=close_surface
+
+# Other
+copy-on-select = clipboard
+shell-integration-features = cursor,sudo,no-title
