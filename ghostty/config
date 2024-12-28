@@ -1,8 +1,10 @@
-# options
 theme = Homebrew
 copy-on-select = clipboard
+font-size = 13
+confirm-close-surface = false
 
 # keybindings
+keybind = clear
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
