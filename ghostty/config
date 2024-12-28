@@ -1,5 +1,8 @@
+# options
+theme = Homebrew
+copy-on-select = clipboard
+
 # keybindings
-keybind = clear
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
@@ -12,7 +15,5 @@ keybind = super+v=paste_from_clipboard
 keybind = super+r=reload_config
 keybind = super+s=write_screen_file:open
 keybind = super+w=close_surface
-
-# Other
-copy-on-select = clipboard
-shell-integration-features = cursor,sudo,no-title
+keybind = super+d=new_split:right
+keybind = super+shift+d=new_split:down
