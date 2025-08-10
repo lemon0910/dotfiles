@@ -1,7 +1,8 @@
-theme = Homebrew
+theme = tokyonight-storm
 copy-on-select = clipboard
 font-size = 13
 confirm-close-surface = false
+cursor-style-blink = false
 
 # keybindings
 keybind = clear
